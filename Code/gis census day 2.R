@@ -14,8 +14,14 @@ m90 %>%
 v15 <- load_variables(2016, "acs5", cache = TRUE)
 
 utils::View(v15)
-
-o1<-get_acs(geography ="state", variables = "B00001_001E", year = 2016)
+B24123_105E #number of environmental scientists and geologists
+o1<-get_acs(geography ="tract",
+            year = 2016,
+            state = "Oregon",
+            county = "Lane County",
+            variables = "B24123_105E", 
+            geometry = TRUE)
+ggplot(o1)
 o1 <- get_acs(geography = "tract", 
                                    year = 2016, # 2012-2016
                                    variables = "B00001_001E",  # Est Total
