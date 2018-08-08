@@ -75,3 +75,4 @@ bikecounts <- bind_rows(Hawthorne,
 bikecounts %>% 
   group_by(Name) %>% 
   summarize(avg_daily_counts=mean(total, na.rm=TRUE))
+utils::View(bikecounts)

@@ -17,7 +17,7 @@ utils::View(v15)
 B24123_105E #number of environmental scientists and geologists
 o1<-get_acs(geography ="tract",
             year = 2016,
-            state = "Oregon",
+            state = "OR",
             county = "Lane County",
             variables = "B24123_105E", 
             geometry = TRUE)
@@ -31,6 +31,7 @@ o1 <- get_acs(geography = "tract",
 ggplot(o1) + 
   geom_sf(aes(fill = estimate)) +
   coord_sf(datum = NA) + theme_minimal()
+?geom_sf
 ## Install the mapview package if you haven't yet
 install.packages("mapview")
 library(sf)
